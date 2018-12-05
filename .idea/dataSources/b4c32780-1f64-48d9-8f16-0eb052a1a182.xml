@@ -897,13 +897,14 @@
     <table id="226" parent="2" name="point"/>
     <column id="227" parent="223" name="id">
       <Position>1</Position>
-      <DataType>binary(16)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="228" parent="223" name="cust_tg_id">
       <Position>2</Position>
-      <DataType>mediumtext|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -926,8 +927,9 @@
     </key>
     <column id="232" parent="224" name="id">
       <Position>1</Position>
-      <DataType>binary(16)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="233" parent="224" name="name">
@@ -938,7 +940,7 @@
     </column>
     <column id="234" parent="224" name="man_tg_id">
       <Position>3</Position>
-      <DataType>mediumtext|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -967,19 +969,20 @@
     </key>
     <column id="239" parent="225" name="id">
       <Position>1</Position>
-      <DataType>binary(16)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="240" parent="225" name="id_point">
       <Position>2</Position>
-      <DataType>binary(16)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="241" parent="225" name="id_cust">
       <Position>3</Position>
-      <DataType>binary(16)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1026,72 +1029,92 @@
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="249" parent="225" name="order_point_id_fk">
+    <column id="249" parent="225" name="customer">
+      <Position>11</Position>
+      <DataType>tinyblob|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="225" name="point">
+      <Position>12</Position>
+      <DataType>tinyblob|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="225" name="custing">
+      <Position>13</Position>
+      <DataType>tinyblob|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="225" name="pointing">
+      <Position>14</Position>
+      <DataType>tinyblob|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="253" parent="225" name="order_point_id_fk">
       <ColNames>id_point</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="250" parent="225" name="order_customer_id_fk">
+    <index id="254" parent="225" name="order_customer_id_fk">
       <ColNames>id_cust</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="251" parent="225" name="PRIMARY">
+    <key id="255" parent="225" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="252" parent="225" name="order_point_id_fk">
+    <foreign-key id="256" parent="225" name="order_point_id_fk">
       <ColNames>id_point</ColNames>
       <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
       <RefTableName>point</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="253" parent="225" name="order_customer_id_fk">
+    <foreign-key id="257" parent="225" name="order_customer_id_fk">
       <ColNames>id_cust</ColNames>
       <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
       <RefTableName>customer</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="254" parent="226" name="id">
+    <column id="258" parent="226" name="id">
       <Position>1</Position>
-      <DataType>binary(16)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="226" name="id_man">
+    <column id="259" parent="226" name="id_man">
       <Position>2</Position>
-      <DataType>binary(16)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="226" name="name">
+    <column id="260" parent="226" name="name">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="226" name="address">
+    <column id="261" parent="226" name="address">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="226" name="rating">
+    <column id="262" parent="226" name="rating">
       <Position>5</Position>
       <DataType>double|0s</DataType>
-      <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="259" parent="226" name="point_manager_id_fk">
+    <index id="263" parent="226" name="FK834xs0c5tdxwm7wgf87jr6tel">
       <ColNames>id_man</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="260" parent="226" name="PRIMARY">
+    <key id="264" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="261" parent="226" name="point_manager_id_fk">
+    <foreign-key id="265" parent="226" name="FK834xs0c5tdxwm7wgf87jr6tel">
       <ColNames>id_man</ColNames>
       <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
       <RefTableName>manager</RefTableName>

@@ -21,20 +21,8 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class Order implements Serializable{
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
-
-    @JsonIgnore
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "id_point")
-    private Point point;
-
-    @JsonIgnore
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "id_cust")
-    private Customer customer;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotNull
     private String taste;
@@ -77,7 +65,7 @@ public class Order implements Serializable{
 
     }
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
@@ -109,15 +97,7 @@ public class Order implements Serializable{
         return isAccepted;
     }
 
-    public Point getPoint() {
-        return point;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -147,13 +127,5 @@ public class Order implements Serializable{
 
     public void setAccepted(boolean flag) {
         this.isAccepted = flag;
-    }
-
-    public void setPoint(Point point) {
-        this.point = point;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
     }
 }

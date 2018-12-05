@@ -18,10 +18,8 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class Customer implements Serializable{
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotNull
     private Long cust_tg_id;
@@ -32,8 +30,9 @@ public class Customer implements Serializable{
     @NotNull
     private String phone;
 
-    @OneToMany(cascade = {CascadeType.ALL})
-    private List<Order> orders = new ArrayList<>();
+    @OneToMany
+    @JoinColumn(name = "id_cust")
+    private List<Order> orders;
 
     public Customer(@NotNull Long cust_tg_id, @NotNull String cust_tg_username, @NotNull String phone) {
         this.cust_tg_id = cust_tg_id;
@@ -41,19 +40,19 @@ public class Customer implements Serializable{
         this.phone = phone;
     }
 
-    public Customer() {
+    public Customer(){
 
     }
 
-    public List<UUID> getAllIds(List<Order> orders) {
-        List<UUID> ids = new ArrayList<>();
+    public List<Long> getAllIds(List<Order> orders) {
+        List<Long> ids = new ArrayList<>();
         for (Order order : orders) {
             ids.add(order.getId());
         }
         return ids;
     }
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
@@ -69,7 +68,7 @@ public class Customer implements Serializable{
         return orders;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

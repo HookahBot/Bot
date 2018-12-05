@@ -18,10 +18,8 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class Manager implements Serializable{
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotNull
     private String name;
@@ -38,9 +36,6 @@ public class Manager implements Serializable{
     @NotNull
     private String phone;
 
-    @OneToMany(cascade = {CascadeType.ALL})
-    private List<Point> points = new ArrayList<>();
-
     public Manager(@NotNull String name, @NotNull Long man_tg_id,
                    @NotNull String man_tg_username, @NotNull String idDoc, @NotNull String phone) {
         this.name = name;
@@ -54,15 +49,7 @@ public class Manager implements Serializable{
 
     }
 
-    public List<UUID> getAllIds(List<Point> points) {
-        List<UUID> ids = new ArrayList<>();
-        for (Point point : points) {
-            ids.add(point.getId());
-        }
-        return ids;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
@@ -86,11 +73,7 @@ public class Manager implements Serializable{
         return phone;
     }
 
-    public List<Point> getPoints() {
-        return points;
-    }
-
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -112,13 +95,5 @@ public class Manager implements Serializable{
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public void setPoints(List<Point> points) {
-        this.points = points;
-    }
-
-    public void addPoints(Point point) {
-        points.add(point);
     }
 }
