@@ -1,6 +1,7 @@
 package edu.bot.hookahBot.orders.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import edu.bot.hookahBot.customers.model.Customer;
 import edu.bot.hookahBot.points.model.Point;
 import org.hibernate.annotations.GenericGenerator;
@@ -11,73 +12,77 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "order")
+@Table(name = "horder")
 @EntityListeners(AuditingEntityListener.class)
-public class Order implements Serializable{
+@JsonIgnoreProperties(value = {"order_time", "order_update"},
+        allowGetters = true)
+public class HOrder implements Serializable{
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "horder_id")
+    private Long id;
 
     @JsonIgnore
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "id_point")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "point_id")
     private Point point;
 
     @JsonIgnore
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "id_cust")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cust_id")
     private Customer customer;
 
-    @NotNull
+     
     private String taste;
 
-    @NotNull
+     
     private String hardness;
 
-    @NotNull
+     
     private String label;
 
-    @NotNull
+     
     private Double price;
 
-    @Column(nullable = false, updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    @CreatedDate
-    private Date orderTime;
+    @Column(updatable = false)
+    private String orderTime;
 
-    @Column(nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    @LastModifiedDate
-    private Date orderUpdate;
+    private String orderUpdate;
 
-    @NotNull
-    private boolean isAccepted = false;
+    @PrePersist
+    protected void onCreate() {
+        orderTime = LocalDateTime.now().toString();
+        orderUpdate = LocalDateTime.now().toString();
+    }
 
-    public Order(@NotNull String taste, @NotNull String hardness, @NotNull String label,
-                 @NotNull Double price, @NotNull Date orderTime, @NotNull Date orderUpdate,
-                 @NotNull boolean isAccepted) {
+    @PreUpdate
+    protected void onUpdate() {
+        orderUpdate = LocalDateTime.now().toString();
+    }
+
+    private boolean isAccepted;
+
+    public HOrder(  String taste,   String hardness,   String label,
+                    Double price) {
         this.taste = taste;
         this.hardness = hardness;
         this.label = label;
         this.price = price;
-        this.orderTime = orderTime;
-        this.orderUpdate = orderUpdate;
-        this.isAccepted = isAccepted;
+        this.isAccepted = false;
     }
 
-    public Order() {
+    public HOrder() {
 
     }
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
@@ -97,11 +102,11 @@ public class Order implements Serializable{
         return price;
     }
 
-    public Date getOrderTime() {
+    public String getOrderTime() {
         return orderTime;
     }
 
-    public Date getOrderUpdate() {
+    public String getOrderUpdate() {
         return orderUpdate;
     }
 
@@ -117,7 +122,7 @@ public class Order implements Serializable{
         return customer;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -137,11 +142,11 @@ public class Order implements Serializable{
         this.price = price;
     }
 
-    public void setOrderTime(Date time) {
+    public void setOrderTime(String time) {
         this.orderTime = time;
     }
 
-    public void setOrderUpdate(Date time) {
+    public void setOrderUpdate(String time) {
         this.orderUpdate= time;
     }
 

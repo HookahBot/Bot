@@ -1,6 +1,7 @@
 package edu.bot.hookahBot.managers.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.bot.hookahBot.points.model.Point;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -18,31 +19,27 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public class Manager implements Serializable{
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(columnDefinition = "BINARY(16)")
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "man_id")
+    private Long id;
 
-    @NotNull
     private String name;
 
-    @NotNull
     private Long man_tg_id;
 
-    @NotNull
     private String man_tg_username;
 
-    @NotNull
     private String idDoc;
 
-    @NotNull
     private String phone;
 
-    @OneToMany(cascade = {CascadeType.ALL})
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
     private List<Point> points = new ArrayList<>();
 
-    public Manager(@NotNull String name, @NotNull Long man_tg_id,
-                   @NotNull String man_tg_username, @NotNull String idDoc, @NotNull String phone) {
+    public Manager(  String name,   Long man_tg_id,
+                     String man_tg_username,   String idDoc,   String phone) {
         this.name = name;
         this.man_tg_id = man_tg_id;
         this.man_tg_username = man_tg_username;
@@ -54,15 +51,7 @@ public class Manager implements Serializable{
 
     }
 
-    public List<UUID> getAllIds(List<Point> points) {
-        List<UUID> ids = new ArrayList<>();
-        for (Point point : points) {
-            ids.add(point.getId());
-        }
-        return ids;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
@@ -90,7 +79,7 @@ public class Manager implements Serializable{
         return points;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -118,7 +107,7 @@ public class Manager implements Serializable{
         this.points = points;
     }
 
-    public void addPoints(Point point) {
+    public void addPoint(Point point) {
         points.add(point);
     }
 }
