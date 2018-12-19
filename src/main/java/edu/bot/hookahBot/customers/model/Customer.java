@@ -1,17 +1,14 @@
 package edu.bot.hookahBot.customers.model;
 
-import edu.bot.hookahBot.orders.model.Order;
-import org.hibernate.annotations.GenericGenerator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import edu.bot.hookahBot.orders.model.HOrder;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table(name = "customer")
@@ -19,22 +16,23 @@ import java.util.UUID;
 public class Customer implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cust_id")
     private Long id;
 
-    @NotNull
+     
     private Long cust_tg_id;
 
-    @NotNull
+     
     private String cust_tg_username;
 
-    @NotNull
+     
     private String phone;
 
-    @OneToMany
-    @JoinColumn(name = "id_cust")
-    private List<Order> orders;
+    @OneToMany(cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private List<HOrder> orders = new ArrayList<>();
 
-    public Customer(@NotNull Long cust_tg_id, @NotNull String cust_tg_username, @NotNull String phone) {
+    public Customer(  Long cust_tg_id,   String cust_tg_username,   String phone) {
         this.cust_tg_id = cust_tg_id;
         this.cust_tg_username = cust_tg_username;
         this.phone = phone;
@@ -44,9 +42,9 @@ public class Customer implements Serializable{
 
     }
 
-    public List<Long> getAllIds(List<Order> orders) {
+    public List<Long> getAllIds(List<HOrder> orders) {
         List<Long> ids = new ArrayList<>();
-        for (Order order : orders) {
+        for (HOrder order : orders) {
             ids.add(order.getId());
         }
         return ids;
@@ -64,7 +62,11 @@ public class Customer implements Serializable{
         return cust_tg_username;
     }
 
-    public List<Order> getOrders() {
+    public String getPhone() {
+        return phone;
+    }
+
+    public List<HOrder> getOrders() {
         return orders;
     }
 
@@ -80,11 +82,15 @@ public class Customer implements Serializable{
         this.cust_tg_username = name;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setOrders(List<HOrder> orders) {
         this.orders = orders;
     }
 
-    public void addOrders(Order order) {
+    public void addOrders(HOrder order) {
         orders.add(order);
     }
 }

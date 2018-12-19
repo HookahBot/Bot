@@ -1,6 +1,7 @@
 package edu.bot.hookahBot.managers.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.bot.hookahBot.points.model.Point;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -19,25 +20,26 @@ import java.util.UUID;
 public class Manager implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "man_id")
     private Long id;
 
-    @NotNull
     private String name;
 
-    @NotNull
     private Long man_tg_id;
 
-    @NotNull
     private String man_tg_username;
 
-    @NotNull
     private String idDoc;
 
-    @NotNull
     private String phone;
 
-    public Manager(@NotNull String name, @NotNull Long man_tg_id,
-                   @NotNull String man_tg_username, @NotNull String idDoc, @NotNull String phone) {
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private List<Point> points = new ArrayList<>();
+
+    public Manager(  String name,   Long man_tg_id,
+                     String man_tg_username,   String idDoc,   String phone) {
         this.name = name;
         this.man_tg_id = man_tg_id;
         this.man_tg_username = man_tg_username;
@@ -73,6 +75,10 @@ public class Manager implements Serializable{
         return phone;
     }
 
+    public List<Point> getPoints() {
+        return points;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -95,5 +101,13 @@ public class Manager implements Serializable{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public void setPoints(List<Point> points) {
+        this.points = points;
+    }
+
+    public void addPoint(Point point) {
+        points.add(point);
     }
 }

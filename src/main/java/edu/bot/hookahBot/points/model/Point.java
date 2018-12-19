@@ -2,18 +2,14 @@ package edu.bot.hookahBot.points.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.bot.hookahBot.managers.model.Manager;
-import edu.bot.hookahBot.orders.model.Order;
-import org.hibernate.annotations.GenericGenerator;
+import edu.bot.hookahBot.orders.model.HOrder;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table(name = "point")
@@ -21,26 +17,28 @@ import java.util.UUID;
 public class Point implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "point_id")
     private Long id;
 
     @JsonIgnore
-    @OneToOne
-    @JoinColumn(name = "id_man")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "man_id")
     private Manager manager;
 
-    @NotNull
+     
     private String name;
 
-    @NotNull
+     
     private String address;
 
     private Double rating;
 
-    @OneToMany
-    @JoinColumn(name = "id_point")
-    private List<Order> orders;
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private List<HOrder> orders = new ArrayList<>();
 
-    public Point(@NotNull String name, @NotNull String address, Double rating) {
+    public Point(  String name,   String address, Double rating) {
         this.name = name;
         this.address = address;
         this.rating = rating;
@@ -50,9 +48,9 @@ public class Point implements Serializable{
 
     }
 
-    public List<Long> getAllIds(List<Order> orders) {
+    public List<Long> getAllIds(List<HOrder> orders) {
         List<Long> ids = new ArrayList<>();
-        for (Order order : orders) {
+        for (HOrder order : orders) {
             ids.add(order.getId());
         }
         return ids;
@@ -78,7 +76,7 @@ public class Point implements Serializable{
         return manager;
     }
 
-    public List<Order> getOrders() {
+    public List<HOrder> getOrders() {
         return orders;
     }
 
@@ -102,11 +100,11 @@ public class Point implements Serializable{
         this.manager = manager;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setOrders(List<HOrder> orders) {
         this.orders = orders;
     }
 
-    public void addOrders(Order order) {
+    public void addOrders(HOrder order) {
         orders.add(order);
     }
 }

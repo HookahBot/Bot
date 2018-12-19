@@ -2,7 +2,7 @@
 <dataSource name="heroku_6c2a62046807a3e@eu-cdbr-west-02.cleardb.net">
   <database-model serializer="dbm" rdbms="MYSQL" format-version="4.11">
     <root id="1">
-      <ServerVersion>5.6.38</ServerVersion>
+      <ServerVersion>5.6.42</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <DefaultCasing>lower/lower</DefaultCasing>
@@ -892,233 +892,306 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="223" parent="2" name="customer"/>
-    <table id="224" parent="2" name="manager"/>
-    <table id="225" parent="2" name="order"/>
-    <table id="226" parent="2" name="point"/>
-    <column id="227" parent="223" name="id">
+    <table id="224" parent="2" name="customer_orders"/>
+    <table id="225" parent="2" name="horder"/>
+    <table id="226" parent="2" name="manager"/>
+    <table id="227" parent="2" name="manager_points"/>
+    <table id="228" parent="2" name="point"/>
+    <table id="229" parent="2" name="point_orders"/>
+    <column id="230" parent="223" name="cust_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="223" name="cust_tg_id">
+    <column id="231" parent="223" name="cust_tg_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="229" parent="223" name="cust_tg_username">
+    <column id="232" parent="223" name="cust_tg_username">
       <Position>3</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="230" parent="223" name="phone">
+    <column id="233" parent="223" name="phone">
       <Position>4</Position>
-      <DataType>varchar(11)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="231" parent="223" name="PRIMARY">
+    <key id="234" parent="223" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>cust_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="232" parent="224" name="id">
+    <column id="235" parent="224" name="customer_cust_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="224" name="name">
+    <column id="236" parent="224" name="orders_horder_id">
       <Position>2</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="234" parent="224" name="man_tg_id">
-      <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="224" name="man_tg_username">
-      <Position>4</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="236" parent="224" name="id_doc">
-      <Position>5</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="237" parent="224" name="phone">
-      <Position>6</Position>
-      <DataType>varchar(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="238" parent="224" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
+    <index id="237" parent="224" name="UK_m3ag7h495ddhi4yehh8ctncmk">
+      <ColNames>orders_horder_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="238" parent="224" name="FKbcgjx4xqp0i89y7q1o7iyumuh">
+      <ColNames>customer_cust_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="239" parent="224" name="UK_m3ag7h495ddhi4yehh8ctncmk">
+      <ColNames>orders_horder_id</ColNames>
+      <UnderlyingIndexName>UK_m3ag7h495ddhi4yehh8ctncmk</UnderlyingIndexName>
     </key>
-    <column id="239" parent="225" name="id">
+    <foreign-key id="240" parent="224" name="FKbcgjx4xqp0i89y7q1o7iyumuh">
+      <ColNames>customer_cust_id</ColNames>
+      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
+      <RefTableName>customer</RefTableName>
+      <RefColNames>cust_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="241" parent="224" name="FKh9gp9ntfqhkjaem6u2xo2qeyt">
+      <ColNames>orders_horder_id</ColNames>
+      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
+      <RefTableName>horder</RefTableName>
+      <RefColNames>horder_id</RefColNames>
+    </foreign-key>
+    <column id="242" parent="225" name="horder_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="240" parent="225" name="id_point">
-      <Position>2</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="241" parent="225" name="id_cust">
-      <Position>3</Position>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="242" parent="225" name="taste">
-      <Position>4</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="243" parent="225" name="hardness">
-      <Position>5</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="225" name="is_accepted">
+      <Position>3</Position>
+      <DataType>bit(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="225" name="label">
-      <Position>6</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="245" parent="225" name="price">
-      <Position>7</Position>
-      <DataType>double|0s</DataType>
-      <NotNull>1</NotNull>
+    <column id="245" parent="225" name="label">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="246" parent="225" name="order_time">
-      <Position>8</Position>
-      <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="247" parent="225" name="order_update">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="248" parent="225" name="price">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="225" name="taste">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="225" name="cust_id">
       <Position>9</Position>
-      <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="225" name="is_accepted">
+    <column id="251" parent="225" name="point_id">
       <Position>10</Position>
-      <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="225" name="customer">
-      <Position>11</Position>
-      <DataType>tinyblob|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="250" parent="225" name="point">
-      <Position>12</Position>
-      <DataType>tinyblob|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="251" parent="225" name="custing">
-      <Position>13</Position>
-      <DataType>tinyblob|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="252" parent="225" name="pointing">
-      <Position>14</Position>
-      <DataType>tinyblob|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="253" parent="225" name="order_point_id_fk">
-      <ColNames>id_point</ColNames>
+    <index id="252" parent="225" name="FKijs5320bpc8xgic1mauj9iklf">
+      <ColNames>cust_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="254" parent="225" name="order_customer_id_fk">
-      <ColNames>id_cust</ColNames>
+    <index id="253" parent="225" name="FKjmwjklt58bgqhnnxyucr6mtsh">
+      <ColNames>point_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="255" parent="225" name="PRIMARY">
+    <key id="254" parent="225" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>horder_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="256" parent="225" name="order_point_id_fk">
-      <ColNames>id_point</ColNames>
-      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
-      <RefTableName>point</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="257" parent="225" name="order_customer_id_fk">
-      <ColNames>id_cust</ColNames>
+    <foreign-key id="255" parent="225" name="FKijs5320bpc8xgic1mauj9iklf">
+      <ColNames>cust_id</ColNames>
       <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
       <RefTableName>customer</RefTableName>
-      <RefColNames>id</RefColNames>
+      <RefColNames>cust_id</RefColNames>
     </foreign-key>
-    <column id="258" parent="226" name="id">
+    <foreign-key id="256" parent="225" name="FKjmwjklt58bgqhnnxyucr6mtsh">
+      <ColNames>point_id</ColNames>
+      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
+      <RefTableName>point</RefTableName>
+      <RefColNames>point_id</RefColNames>
+    </foreign-key>
+    <column id="257" parent="226" name="man_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="226" name="id_man">
+    <column id="258" parent="226" name="id_doc">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="226" name="man_tg_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="226" name="man_tg_username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="261" parent="226" name="name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="226" name="phone">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="263" parent="226" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>man_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="264" parent="227" name="manager_man_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="227" name="points_point_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="226" name="name">
-      <Position>3</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="261" parent="226" name="address">
-      <Position>4</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="262" parent="226" name="rating">
-      <Position>5</Position>
-      <DataType>double|0s</DataType>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="263" parent="226" name="FK834xs0c5tdxwm7wgf87jr6tel">
-      <ColNames>id_man</ColNames>
+    <index id="266" parent="227" name="UK_m5o1pv46ow2sguk61ug1qpidt">
+      <ColNames>points_point_id</ColNames>
+      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="264" parent="226" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
+    <index id="267" parent="227" name="FK4ksv2k79aeyqfwbfwqfd2clt2">
+      <ColNames>manager_man_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="268" parent="227" name="UK_m5o1pv46ow2sguk61ug1qpidt">
+      <ColNames>points_point_id</ColNames>
+      <UnderlyingIndexName>UK_m5o1pv46ow2sguk61ug1qpidt</UnderlyingIndexName>
     </key>
-    <foreign-key id="265" parent="226" name="FK834xs0c5tdxwm7wgf87jr6tel">
-      <ColNames>id_man</ColNames>
+    <foreign-key id="269" parent="227" name="FK4ksv2k79aeyqfwbfwqfd2clt2">
+      <ColNames>manager_man_id</ColNames>
       <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
       <RefTableName>manager</RefTableName>
-      <RefColNames>id</RefColNames>
+      <RefColNames>man_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="270" parent="227" name="FKbgx5avchxk5peh91j3t3scm1o">
+      <ColNames>points_point_id</ColNames>
+      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
+      <RefTableName>point</RefTableName>
+      <RefColNames>point_id</RefColNames>
+    </foreign-key>
+    <column id="271" parent="228" name="point_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="228" name="address">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="228" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="274" parent="228" name="rating">
+      <Position>4</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="228" name="man_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="276" parent="228" name="FKh38wwkp09ac6m0qat7yrlx1bl">
+      <ColNames>man_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="277" parent="228" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>point_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="278" parent="228" name="FKh38wwkp09ac6m0qat7yrlx1bl">
+      <ColNames>man_id</ColNames>
+      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
+      <RefTableName>manager</RefTableName>
+      <RefColNames>man_id</RefColNames>
+    </foreign-key>
+    <column id="279" parent="229" name="point_point_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="280" parent="229" name="orders_horder_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="281" parent="229" name="UK_208k55tds8g3vy0cj6kj147dd">
+      <ColNames>orders_horder_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="282" parent="229" name="FKjn94lc22rabd9810rv69d7msk">
+      <ColNames>point_point_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="283" parent="229" name="UK_208k55tds8g3vy0cj6kj147dd">
+      <ColNames>orders_horder_id</ColNames>
+      <UnderlyingIndexName>UK_208k55tds8g3vy0cj6kj147dd</UnderlyingIndexName>
+    </key>
+    <foreign-key id="284" parent="229" name="FKjn94lc22rabd9810rv69d7msk">
+      <ColNames>point_point_id</ColNames>
+      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
+      <RefTableName>point</RefTableName>
+      <RefColNames>point_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="285" parent="229" name="FKreemlkwobn18393iu9dqeh9f4">
+      <ColNames>orders_horder_id</ColNames>
+      <RefSchemaName>heroku_6c2a62046807a3e</RefSchemaName>
+      <RefTableName>horder</RefTableName>
+      <RefColNames>horder_id</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>
