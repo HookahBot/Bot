@@ -6,6 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="83ca5292-d2e4-48ec-91b7-fd1c11e0005c" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/org_projectlombok_lombok_1_18_4.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/controllers/UserController.java" afterDir="false" />
@@ -27,6 +28,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,21 +88,6 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="DATABASE/b4c32780-1f64-48d9-8f16-0eb052a1a182" value="3" />
-          <entry key="SCHEMA:heroku_6c2a62046807a3e" value="11" />
-          <entry key="class" value="1" />
-          <entry key="cmd" value="1" />
-          <entry key="customer" value="17" />
-          <entry key="customer_orders" value="3" />
-          <entry key="horder" value="5" />
-          <entry key="iml" value="2" />
-          <entry key="java" value="41" />
-          <entry key="manager" value="5" />
-          <entry key="mvnw" value="1" />
-          <entry key="order" value="3" />
-          <entry key="point" value="5" />
-          <entry key="point_orders" value="1" />
-          <entry key="properties" value="8" />
           <entry key="sql" value="2" />
           <entry key="xml" value="2" />
         </counts>
@@ -107,31 +95,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="Database Element" value="37" />
-          <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="41" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Properties" value="8" />
-          <entry key="Scratch" value="2" />
-          <entry key="UML" value="16" />
-          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="12" />
-          <entry key="java" value="3452" />
-          <entry key="properties" value="3" />
-          <entry key="sql" value="238" />
-          <entry key="txt" value="95" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3452" />
-          <entry key="PLAIN_TEXT" value="107" />
-          <entry key="Properties" value="3" />
-          <entry key="SQL" value="238" />
         </counts>
       </usages-collector>
     </session>
@@ -177,6 +148,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/enteties/Param.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
@@ -196,11 +168,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/orders/model/HOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/ObjectRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
@@ -208,10 +185,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/ObjectTypeRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -231,6 +213,11 @@
               <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/points/controller/PointController.java">
+          <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
               </folding>
             </state>
           </provider>
@@ -239,22 +226,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="285">
               <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/repositories/MetaModelUserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="434">
               <caret line="175" column="28" lean-forward="true" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
               </folding>
             </state>
           </provider>
@@ -272,16 +265,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/repositories/ModelRepository.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="19">
               <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/exceptions/UserNotFoundException.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
@@ -294,6 +291,8 @@
                 <element signature="e#389#390#0" expanded="true" />
                 <element signature="e#417#418#0" expanded="true" />
               </folding>
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
             </state>
           </provider>
         </entry>
@@ -313,18 +312,6 @@
       <find>coach</find>
       <find>player</find>
       <find>UUID</find>
-      <find>Customer</find>
-      <find>Point</find>
-      <find>customer</find>
-      <find>@NOTNULL</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>customer</replace>
-      <replace>Long</replace>
-      <replace>Point</replace>
-      <replace>Manager</replace>
-      <replace>order</replace>
-      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -347,8 +334,14 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/orders/model/HOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/customers/model/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/managers/model/Manager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/customers/repository/CustomerRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/managers/repository/ManagerRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/orders/repository/OrderRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/points/repository/PointRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/orders/model/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/customers/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/HookahBotApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/points/model/Point.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/points/controller/PointController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/enteties/Attribute.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/enteties/Object.java" />
@@ -378,6 +371,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+<<<<<<< HEAD
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -390,6 +384,8 @@
     <option name="y" value="43" />
     <option name="width" value="1657" />
     <option name="height" value="1036" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -404,62 +400,34 @@
           <expand>
             <path>
               <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
               <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -477,24 +445,36 @@
             <path>
               <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+=======
             </path>
             <path>
               <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
               <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="users" type="462c0819:PsiDirectoryNode" />
               <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -508,6 +488,37 @@
             <path>
               <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hookahBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hookahBot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
             </path>
           </expand>
           <select />
@@ -527,10 +538,13 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543995063149" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -652,6 +666,7 @@
       <option name="presentableId" value="Default" />
       <updated>1543935663876</updated>
       <workItem from="1543935667663" duration="29940000" />
+<<<<<<< HEAD
       <workItem from="1544006214590" duration="35000" />
       <workItem from="1544296788006" duration="8495000" />
       <workItem from="1545143049427" duration="15367000" />
@@ -661,11 +676,17 @@
       <workItem from="1545695254524" duration="613000" />
       <workItem from="1545696315223" duration="35000" />
       <workItem from="1547666507453" duration="3427000" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="62357000" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,10 +698,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="185" y="43" width="1657" height="1036" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2526381" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -688,7 +712,6 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32949308" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32949308" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
@@ -698,8 +721,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Application Servers" order="10" weight="0.328341" />
       <window_info anchor="bottom" id="Run" order="11" weight="0.32949308" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
       <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
@@ -709,7 +735,10 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
+<<<<<<< HEAD
       <window_info anchor="right" id="Database" order="5" visible="true" weight="0.12973309" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -722,17 +751,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created repositories directories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created repositories directories" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mvnw">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/43268f11-5361-441f-9c3b-86d720db31a4/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b4c32780-1f64-48d9-8f16-0eb052a1a182/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="uml://DATABASE/b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.order">
@@ -758,15 +785,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hookahBot.iml">
       <provider selected="true" editor-type-id="text-editor" />
+<<<<<<< HEAD
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.8.2/mongodb-driver-core-3.8.2.jar!/com/mongodb/internal/connection/InternalStreamConnection.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -811,6 +832,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
     <entry file="uml://DATABASE/b4c32780-1f64-48d9-8f16-0eb052a1a182">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -824,13 +847,29 @@
           </nodes>
           <notes />
           <edges />
+<<<<<<< HEAD
           <settings layout="Hierarchic Group" zoom="1.0" x="258.0" y="350.0" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
           <SelectedNodes />
           <Categories>
             <Category>Key columns</Category>
             <Category>Columns</Category>
           </Categories>
           <SCOPE>All</SCOPE>
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/orders/repository/OrderRepo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/managers/repository/ManagerRepo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/points/repository/PointRepo.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mongodb/mongodb-driver-core/3.8.2/mongodb-driver-core-3.8.2.jar!/com/mongodb/internal/connection/InternalStreamConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
         </state>
       </provider>
     </entry>
@@ -841,6 +880,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="das://b4c32780-1f64-48d9-8f16-0eb052a1a182/schema/heroku_6c2a62046807a3e/table/manager">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -927,6 +967,12 @@
             <element signature="e#651#652#0" expanded="true" />
             <element signature="e#717#718#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/points/repository/PointRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
         </state>
       </provider>
     </entry>
@@ -936,6 +982,7 @@
           <ID>DATABASE</ID>
           <OriginalElement>b4c32780-1f64-48d9-8f16-0eb052a1a182.SCHEMA:heroku_6c2a62046807a3e</OriginalElement>
           <nodes>
+<<<<<<< HEAD
             <node x="401.0" y="0.0">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.manager</node>
             <node x="152.375" y="428.0">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.horder</node>
             <node x="1010.2333333333333" y="130.0">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.attribute</node>
@@ -1036,10 +1083,22 @@
           <SelectedNodes>
             <node>b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.customer_orders</node>
           </SelectedNodes>
+=======
+            <node x="" y="">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.manager</node>
+            <node x="" y="">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.horder</node>
+            <node x="" y="">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.customer</node>
+            <node x="" y="">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.manager_points</node>
+            <node x="" y="">b4c32780-1f64-48d9-8f16-0eb052a1a182.TABLE:heroku_6c2a62046807a3e.point</node>
+          </nodes>
+          <notes />
+          <edges />
+          <SelectedNodes />
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
           <Categories>
             <Category>Key columns</Category>
             <Category>Columns</Category>
           </Categories>
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -1057,11 +1116,30 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/customers/model/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="513">
           <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
@@ -1073,6 +1151,8 @@
           <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
           </folding>
         </state>
       </provider>
@@ -1086,6 +1166,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/enteties/Attribute.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="361">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
@@ -1130,10 +1211,13 @@
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/ObjectRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1141,19 +1225,25 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/ObjectTypeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="209">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/bot/hookahBot/users/dao/metamodel/ParamRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1216,6 +1306,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 58668c38968fcb0915f87289e50022e7955d1584
   </component>
   <component name="masterDetails">
     <states>
